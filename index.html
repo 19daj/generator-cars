@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Cars</title>
+    <link rel="stylesheet" href="main.css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+</head>
+<body>
+    <div>
+        <h1 id="title">Generador de carros</h1>
+    </div>
+    <div id="principal-content">
+        <div class="space-top">
+            <label class="bold">Marca:</label>
+            <select id="mark" onchange="markCars()">
+                <option value="Seleccionar" id="selectMark" selected>Seleccione una opción</option>
+                <option value="Nissan">Nissan</option>
+                <option value="Ford">Ford</option>
+                <option value="Chevrolet">Chevrolet</option>
+                <option value="Mazda">Mazda</option>
+                <option value="Audi">Audi</option>
+            </select>
+        </div>
+        <div class="space-top">
+            <label class="bold">Modelo / Tipo:</label>
+            <select id="model" onfocus="model()" onclick="modelCars()" disabled>
+                <option value="Seleccionar" id="selection" selected>Seleccione una opción</option>
+                <option value="Seleccionar" id="firstOption">Seleccione Marca</option>
+                <option value="Seleccionar" id="secondOption">Seleccione Marca</option>
+                <option value="Seleccionar" id="thirdOption">Seleccione Marca</option>
+                <option value="Seleccionar" id="fourthOption">Seleccione Marca</option>
+            </select>
+        </div>
+        <div class="space-top">
+            <label class="bold">Año:</label>
+            <input type="text" size="1" id="year" autocomplete="off" maxlength="4">
+        </div>
+        <div class="space-top">
+            <label class="bold">Color:</label>
+            <select name="colors" id="color">
+                <option value="Seleccionar" id="colorOption" selected>Seleccione una opción</option>
+                <option value="Azul Marino">Azul Marino</option>
+                <option value="Azul Cielo">Azul Cielo</option>
+                <option value="Blanco">Blanco</option>
+                <option value="Negro">Negro</option>
+                <option value="Gris">Gris</option>
+                <option value="Verde">Verde</option>
+                <option value="Naranja">Naranja</option>
+                <option value="Tinto">Tinto</option>
+                <option value="Rosa">Rosa</option>
+                <option value="Amarillo">Amarillo</option>
+            </select>
+        </div>
+        <div class="space-top">
+            <button class="bold" id="carRegistration">Matrícula:</button>
+            <span id="fatherContent">
+                <span id="contentRegistration"></span>
+            </span>
+        </div>
+        <div class="space-top">
+            <label class="bold">Versión:</label>
+            <select name="versions" id="version">
+                <option value="Seleccionar" id="versionSelect" selected>Seleccione una opción</option>
+                <option value="Básica">Básica</option>
+                <option value="De Lujo">De Lujo</option>
+            </select>
+        </div>
+        <div class="space-top">
+            <label class="bold">Transmisión:</label>
+            <select name="transmitions" id="transmition">
+                <option value="Seleccionar" id="transmitionSelect" selected>Seleccione una opción</option>
+                <option value="Estándar">Estándar</option>
+                <option value="Automática">Automática</option>
+            </select>
+        </div>
+        <div>
+            <button class="space-top bold" id="generator">Generar</button>
+            <button class="space-left bold" id="cleanBttn">Borrar</button>
+            <div id="first-content-car">
+                <div id="content-car"></div>
+            </div>
+        </div>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>
